@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 16:08:47 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/25 16:39:27 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/04/25 16:48:03 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,15 @@ t_list *ft_lstnew(void *content)
 {
 	t_list *new_list;
 	new_list = malloc(sizeof(t_list));
-		
+	if (!new_list)
+		return(NULL);
+	new_list -> content = content;
+	new_list -> next = NULL;
+	return (new_list);		
+}
+
+t_list 
+{
+	int content 
+	t_list *next
 }
