@@ -48,13 +48,13 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int	main(void)
-{
-	int i = 0;
-	int tab[5] = {-2147483648, -42, 0, 42, 2147483647};
+// int	main(void)
+// {
+// 	int i = 0;
+// 	int tab[5] = {-2147483648, -42, 0, 42, 2147483647};
 
-	while (i < 5)
-		printf("%s\n", ft_itoa(tab[i++]));
+// 	while (i < 5)
+// 		printf("%s\n", ft_itoa(tab[i++]));
 
-	return 0;
-}
+// 	return 0;
+// }

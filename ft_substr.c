@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	index2 = 0;
-	if (start >= ft_strlen(s) || len == 0)
+	if (start >= (unsigned int)ft_strlen(s) || len == 0)
 		{
 			str = malloc(1);
 			str[0] = '\0';
@@ -33,7 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = (char *)malloc(ft_strlen(s) - start);
 	if (!str)
 		return(NULL);
-	while (start < ft_strlen(s))
+	while (start <  (unsigned int)ft_strlen(s))
 		str[index2++] = s[start++];
 	str[index2] = '\0';
 	return (str);		
@@ -49,15 +49,15 @@ void	test_substr(const char *s, unsigned int start, size_t len)
 	free(result);
 }
 
-int	main(void)
-{
-	test_substr("Hello World", 0, 5);          // "Hello"
-	test_substr("Hello World", 6, 5);          // "World"
-	test_substr("Hello World", 6, 50);         // "World" (limite > fin)
-	test_substr("Hello World", 11, 5);         // "" (start == len de la chaîne)
-	test_substr("Hello World", 15, 3);         // "" (start > len de la chaîne)
-	test_substr("", 0, 5);                     // "" (chaîne vide)
-	test_substr("Hello", 0, 0);                // "" (longueur 0)
+// int	main(void)
+// {
+// 	test_substr("Hello World", 0, 5);          // "Hello"
+// 	test_substr("Hello World", 6, 5);          // "World"
+// 	test_substr("Hello World", 6, 50);         // "World" (limite > fin)
+// 	test_substr("Hello World", 11, 5);         // "" (start == len de la chaîne)
+// 	test_substr("Hello World", 15, 3);         // "" (start > len de la chaîne)
+// 	test_substr("", 0, 5);                     // "" (chaîne vide)
+// 	test_substr("Hello", 0, 0);                // "" (longueur 0)
 
-	return 0;
-}
+// 	return 0;
+// }

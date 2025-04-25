@@ -1,4 +1,4 @@
-#include <libft.h>
+#include "libft.h"
 
 char    *ft_strdup(const char *source)
 {
@@ -16,6 +16,6 @@ char    *ft_strdup(const char *source)
         str_dup[i] = source[i];
         i++;
     }
-    return (str_dup)
+    return (str_dup);
     
 }

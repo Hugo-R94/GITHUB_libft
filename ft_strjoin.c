@@ -1,28 +1,72 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/28 16:54:12 by hrouchy           #+#    #+#             */
+/*   Updated: 2025/04/25 15:26:43 by hrouchy          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int	ft_strlen(const char *str)
+{
+	int	i;	
+
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
+}
+
+char	*ft_strcat(char *dest, const char *src)
+{
+	int	i;
+	int	e;
+
+	i = 0;
+	e = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	while (src[e] != '\0')
+	{
+		dest[i] = src[e];
+		e++;
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
 
 char    *ft_strjoin(char const *s1,char const *s2)
 {
     char    *str_join;
-    int index;
-    int index2;
+	int index;
 
-    index2 = 0;
-    index = 0;
-    str_join = malloc(ft_strlen(s1) + ft_strlen(s2));
-    if (!str_join)
-        return(NULL);
-    while (s1 == '\0')
-    {
-        str_join = s1;
-        str_join++;
-        s1++;
-    }
-    while (s2 =='\0')
-    {
-        str_join = s2;
-        str_join++;
-        s2++;
-    }
+	index = 0;
+	str_join = malloc(ft_strlen(s1) + ft_strlen(s2));
+	if(!str_join)
+		return (NULL);
+    str_join[0] = '\0';
+	ft_strcat(str_join,s1);
+	ft_strcat(str_join,s2);
     return(str_join);
-    
 }
+
+// int	main(void)
+// {
+
+
+//     char *str1 = "calloc";
+//     char *str2 = " malloc";
+
+// 	printf("%s", ft_strjoin(str1,str2));
+// }

@@ -49,11 +49,11 @@ char	*ft_strtrim(const char *s1, const char *set)
 }
 
 
-int		main(void)
-{
-	char *charset = " \n\t\v\f ";
+// int		main(void)
+// {
+// 	char *charset = " \n\t\v\f ";
 
-	char *s1 = "\t \n\n \t\t \n\n\nHello \t  Please\n Trim me !\n  \n \n \t\t\n";
-	printf("%s\n", ft_strtrim(s1,charset));
-	return (0);
-}
+// 	char *s1 = "\t \n\n \t\t \n\n\nHello \t  Please\n Trim me !\n  \n \n \t\t\n";
+// 	printf("%s\n", ft_strtrim(s1,charset));
+// 	return (0);
+// }
