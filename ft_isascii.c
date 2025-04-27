@@ -4,14 +4,8 @@
 
 int	ft_isprint(char c)
 {
-    if (c >= 0 && c <= 127)
+    if (c >= 0 && c <= 126)
         return (1);
     else   
         return (0);
 }
-
-// int main()
-// {
-//     char char_c = 'e';
-//     printf("is char is ascii ? = %d \n", ft_isprint(char_c));
-// }

@@ -30,9 +30,8 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (new_str);
 }
 
-char	to_upper(unsigned int index,char c)
+char	to_upper(char c)
 {
-	index = 0;
 	if (c >='a' && c<='z')
 		c= c - 32;
 	return c;

@@ -49,9 +49,7 @@ char	*ft_strcat(char *dest, const char *src)
 char    *ft_strjoin(char const *s1,char const *s2)
 {
     char    *str_join;
-	int index;
 
-	index = 0;
 	str_join = malloc(ft_strlen(s1) + ft_strlen(s2));
 	if(!str_join)
 		return (NULL);
